@@ -8,8 +8,10 @@ Area.prototype = {
 , callback: null
 
 , join: function(callback) {
-    if (this.count == 0)
+    if (this.count == 0) {
+      this._reset()
       return callback()
+    }
     this.callback = callback
   }
 
@@ -19,8 +21,16 @@ Area.prototype = {
 
 , decrease: function() {
     this.count --
-    if( this.count == 0 && this.callback )
-      this.callback()
+    if( this.count == 0 && this.callback ) {
+      var cb = this.callback
+      this._reset()
+      cb()
+    }
+  }
+
+, _reset: function() {
+    this.count = 0
+    this.callback = null
   }
 }
 
