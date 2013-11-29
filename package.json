@@ -1,6 +1,6 @@
 {
   "name": "area",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An improved async-job counter",
   "main": "area.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url" : "https://github.com/esjeon/node-area.git"
   },
   "keywords": [
-    "asynchronous"
+    "asynchronous", "async"
   ],
   "author": {
     "name": "Eon S. Jeon",
