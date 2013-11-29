@@ -15,13 +15,15 @@ Area.prototype = {
     this.callback = callback
   }
 
-, increase: function() {
-    this.count ++
+, increase: function(n) {
+    if(!n) n = 1
+    this.count += n
   }
 
-, decrease: function() {
-    this.count --
-    if(this.count == 0 && this.callback) {
+, decrease: function(n) {
+    if(!n) n = 1
+    this.count -= n
+    if(this.count <= 0 && this.callback) {
       var cb = this.callback
       this._reset()
       cb()
