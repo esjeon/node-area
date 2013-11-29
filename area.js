@@ -36,6 +36,9 @@ Area.prototype = {
   }
 }
 
+Area.prototype.inc = Area.prototype.increase
+Area.prototype.dec = Area.prototype.decrease
+
 Function.prototype.join = function(area) {
   var self = this
   area.increase()
